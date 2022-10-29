@@ -1,0 +1,28 @@
+<section class="container">
+  <h2>From Event</h2>
+
+  <div class="flex">
+    <mat-card class="example-card">
+      <mat-card-header style="background-color: #f9f8f9">
+        <mat-card-subtitle>Add Vedio</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions>
+        <button type="submit" mat-flat-button color="primary" #btn>Add</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card class="example-cards">
+      <mat-card-header style="background-color: #f9f8f9">
+        <mat-card-subtitle>Add Vedio</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions>
+        <mat-list role="list">
+          <mat-list-item role="listitem" *ngFor="let data of videoData">{{
+            data
+          }}</mat-list-item>
+        </mat-list>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>

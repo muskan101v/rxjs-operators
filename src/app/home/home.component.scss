@@ -1,0 +1,11 @@
+mat-grid-tile {
+  background: rgb(231, 240, 243);
+  color: #919fa9;
+  cursor: pointer;
+  &:hover {
+    background: #e3f2fd;
+    color: #477598;
+    box-shadow: 0 0 60px #b3cada inset;
+    text-decoration: none;
+  }
+}

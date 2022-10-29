@@ -1,0 +1,38 @@
+<section class="container">
+  {{ objMsg }}
+  <div class="flex">
+    <div class="example-cards">
+      <h1>Interval</h1>
+      <mat-card class="example-cards">
+        <mat-card-header style="background-color: #f9f8f9">
+          <mat-card-subtitle>Add Vedio</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-actions>
+          <mat-list role="list">
+            <mat-list-item role="listitem" *ngFor="let data of videoData">{{
+              data
+            }}</mat-list-item>
+          </mat-list>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <div class="example-cards">
+      <h1>Timer</h1>
+      <mat-card class="example-cards">
+        <mat-card-header style="background-color: #f9f8f9">
+          <mat-card-subtitle>Add Vedio</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-actions>
+          <mat-list role="list">
+            <mat-list-item role="listitem" *ngFor="let data of timerData">{{
+              data
+            }}</mat-list-item>
+          </mat-list>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</section>

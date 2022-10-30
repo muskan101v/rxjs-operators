@@ -1,6 +1,6 @@
 .flex {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .container {
@@ -18,16 +18,4 @@ hr {
   padding: 8px;
   border-radius: 4px;
   margin-top: 16px;
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td,
-th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
 }

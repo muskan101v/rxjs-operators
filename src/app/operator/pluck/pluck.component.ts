@@ -23,7 +23,6 @@ export class PluckComponent implements OnInit {
           next: (response) => {
             // console.log(response);
             this.titleData = response;
-            // this.print(response, 'elContainer');
           },
           complete: () => {
             console.log('complete');
@@ -41,18 +40,11 @@ export class PluckComponent implements OnInit {
           next: (response) => {
             console.log(response);
             this.haircolor = response;
-            //   // this.print(response, 'elContainer');
           },
           complete: () => {
             console.log('complete');
           },
         });
       });
-  }
-
-  print(val, containerId) {
-    let el = document.createElement('li');
-    el.innerText = val;
-    document.getElementById(containerId).appendChild(el);
   }
 }

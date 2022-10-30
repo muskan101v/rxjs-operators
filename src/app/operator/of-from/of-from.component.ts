@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { from, of } from 'rxjs';
+import { ServiceService } from 'src/app/service.service';
 
 @Component({
   selector: 'app-of-from',
@@ -8,7 +9,7 @@ import { from, of } from 'rxjs';
 })
 export class OfFromComponent implements OnInit {
   objMsg;
-  constructor() {}
+  constructor(private service: ServiceService) {}
 
   ngOnInit(): void {
     this.ofOperator();
@@ -39,7 +40,7 @@ export class OfFromComponent implements OnInit {
       next: (res) => {
         this.objMsg = res;
         console.log(res);
-        this.print(res, 'elContainer');
+        this.service.print(res, 'elContainer');
       },
       complete: () => {
         console.log('Complete');
@@ -71,7 +72,7 @@ export class OfFromComponent implements OnInit {
     from(['Muskan', 'Tanaya', 'Dhruv']).subscribe({
       next: (res) => {
         console.log(res);
-        this.print(res, 'arrayContainer');
+        this.service.print(res, 'arrayContainer');
       },
       // complete: () => {
       //   console.log('Complete');
@@ -91,7 +92,7 @@ export class OfFromComponent implements OnInit {
     promiseObservable.subscribe({
       next: (res) => {
         console.log(res);
-        this.print(res, 'promiseContainer');
+        this.service.print(res, 'promiseContainer');
       },
       error: (err) => {
         console.log(err);
@@ -111,7 +112,7 @@ export class OfFromComponent implements OnInit {
     //output: [1, 'Hi'], [2, 'Bye']
     const subscribe = mapSource.subscribe((val) => {
       console.log(val);
-      this.print(val, 'objectContainer');
+      this.service.print(val, 'objectContainer');
     });
   }
 
@@ -122,15 +123,8 @@ export class OfFromComponent implements OnInit {
     //output: 'H','e','l','l','o',' ','W','o','r','l','d'
     const subscribe = source.subscribe((val) => {
       console.log(val);
-      this.print(val, 'stringContainer');
+      this.service.print(val, 'stringContainer');
     });
-  }
-
-  print(val, containerId) {
-    let el = document.createElement('li');
-    el.innerText = val;
-    document.getElementById(containerId).appendChild(el);
-    el.classList.add('li');
   }
 }
 
@@ -140,60 +134,3 @@ In above example Subscription gets closed before the fourth next notification ge
 
 // forkJoin - When all observables complete, emit the last emitted value from each.
 // combineLatest - When any observable emits a value, emit the latest value from each.
-
-/*
-Filter
-It is similar to the 'filter' operator in JavaScript arrays. The general idea is the same,
-
-however, instead of filtering the items in an array, the 'filter' Pipeable Operator filters the emitted values
-
-and passes them through or not.
-
-
-
-Tap
- It allows us to cause side effects without changing the notifications.
-
-Among other things, it is useful for debugging and learning purposes.
-
-For example, we can console log the emitted values at any stage of the pipeline of operators if we use
-
-multiple operators stacked, which we'll talk about in a second.
-
-it is possible that the set of notifications which will reach our Observer will be completely different
-
-from those originally emitted by the source Observable. Summarizing, Pipeable Operators allow us to transform
-
-the notifications before they reach our Observer.
-
-We can apply as many operators as we want because one operator's output can be another operator's input.
-
-As a side note, the argument which you provide to the 'tap' operator over here, works the same way as
-
-the one which you pass to the subscribe method,
-
-so you can use that full Observer object.
-
-And also provide side effects for complete or error notifications if you want.
-
-OK. So, another important thing to remember is that using 'tap' won't execute the Observable. Even if
-
-you place it at the end, like so. It will just add a side effect.
-
-You still need to subscribe at the end to make everything work.
-
-
-
-debounceTimelink
-Emits a notification from the source Observable only after a particular time span has passed without another source emission.
-
-Debouncing is a programming practice used to ensure that time-consuming tasks do not fire so often,
-that it stalls the performance of the web page.
- In other words, it limits the rate at which a function gets invoked.
-
-
-Use cases for debounce:
-Typing. You want to do something after the user stopped typing. So waiting 1sec after the last keystroke makes sense. ...
-Animation. You want to shrink back an element after the user stopped hovering over it.
-
-*/

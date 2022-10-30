@@ -9,6 +9,11 @@ import { OfFromComponent } from './operator/of-from/of-from.component';
 import { PluckComponent } from './operator/pluck/pluck.component';
 import { ThrowErrorComponent } from './operator/throw-error/throw-error.component';
 import { ToArrayComponent } from './operator/to-array/to-array.component';
+import { FilterComponent } from './operator/filter/filter.component';
+import { TapComponent } from './operator/tap/tap.component';
+import { TakeComponent } from './operator/take/take.component';
+import { RetryComponent } from './operator/retry/retry.component';
+import { DebounceTimeDistinctUntilchangedComponent } from './operator/debounce-time-distinct-untilchanged/debounce-time-distinct-untilchanged.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -44,6 +49,26 @@ const routes: Routes = [
   {
     path: 'pluck',
     component: PluckComponent,
+  },
+  {
+    path: 'filter',
+    component: FilterComponent,
+  },
+  {
+    path: 'tap',
+    component: TapComponent,
+  },
+  {
+    path: 'take',
+    component: TakeComponent,
+  },
+  {
+    path: 'retry',
+    component: RetryComponent,
+  },
+  {
+    path: 'debounceTime & DistinctUntilchanged',
+    component: DebounceTimeDistinctUntilchangedComponent,
   },
 ];
 

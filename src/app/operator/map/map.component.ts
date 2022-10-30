@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { concatMap, from, interval, map, Subscription } from 'rxjs';
+import { ServiceService } from 'src/app/service.service';
 
 @Component({
   selector: 'app-map',
@@ -17,7 +18,7 @@ This operator takes the emitted value and can transform it into some other value
   msg2: any;
   broadcastSubscrption: Subscription;
   broadcastSubscrption2: Subscription;
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private service: ServiceService) {}
 
   ngOnInit(): void {
     //example 1
@@ -63,16 +64,11 @@ This operator takes the emitted value and can transform it into some other value
           )
           .subscribe((response) => {
             console.log(response);
-            this.print(response, 'elContainer');
+            this.service.print(response, 'elContainer');
           });
       });
   }
 
-  print(val, containerId) {
-    let el = document.createElement('li');
-    el.innerText = val;
-    document.getElementById(containerId).appendChild(el);
-  }
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.

@@ -18,6 +18,14 @@ export class HomeComponent implements OnInit {
     'customObservable',
     'map',
     'pluck',
+    'filter',
+    'tap',
+    'take,takeLast,takeUntil',
+    'retry,retryWhen ,scan and delay',
+    'debounceTime & DistinctUntilchanged',
+    'freomEvent',
+    'freomEvent',
+    'freomEvent',
     'freomEvent',
     'freomEvent',
     'freomEvent',
@@ -25,7 +33,18 @@ export class HomeComponent implements OnInit {
     'freomEvent',
   ];
   onclick(item: string) {
-    this.router.navigate([`/${item}`]);
+    switch (item) {
+      case 'take,takeLast,takeUntil':
+        item = 'take';
+        this.router.navigate([`/${item}`]);
+        break;
+      case 'retry,retryWhen ,scan and delay':
+        item = 'retry';
+        this.router.navigate([`/${item}`]);
+        break;
+      default:
+        this.router.navigate([`/${item}`]);
+    }
   }
 
   ngOnInit(): void {}

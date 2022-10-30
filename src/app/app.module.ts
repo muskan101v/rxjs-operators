@@ -25,6 +25,13 @@ import { MapComponent } from './operator/map/map.component';
 import { OfFromComponent } from './operator/of-from/of-from.component';
 import { ThrowErrorComponent } from './operator/throw-error/throw-error.component';
 import { ToArrayComponent } from './operator/to-array/to-array.component';
+import { TapComponent } from './operator/tap/tap.component';
+import { TakeComponent } from './operator/take/take.component';
+import { RetryComponent } from './operator/retry/retry.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { DebounceTimeDistinctUntilchangedComponent } from './operator/debounce-time-distinct-untilchanged/debounce-time-distinct-untilchanged.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -39,6 +46,10 @@ import { ToArrayComponent } from './operator/to-array/to-array.component';
     MapComponent,
     PluckComponent,
     FilterComponent,
+    TapComponent,
+    TakeComponent,
+    RetryComponent,
+    DebounceTimeDistinctUntilchangedComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +63,9 @@ import { ToArrayComponent } from './operator/to-array/to-array.component';
     MatButtonModule,
     MatListModule,
     MatChipsModule,
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

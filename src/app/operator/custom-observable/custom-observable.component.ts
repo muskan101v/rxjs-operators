@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subscription, toArray } from 'rxjs';
+import { ServiceService } from 'src/app/service.service';
 
 @Component({
   selector: 'app-custom-observable',
@@ -26,7 +27,7 @@ export class CustomObservableComponent implements OnInit {
       console.log('Teardown');
     };
   });
-  constructor() {}
+  constructor(private service: ServiceService) {}
 
   data: any;
   names: any;
@@ -64,7 +65,7 @@ export class CustomObservableComponent implements OnInit {
     obs.subscribe({
       next: (res) => {
         this.data = res;
-        this.print(res, 'elContanier');
+        this.service.print(res, 'elContanier');
         // console.log(res);
       },
       error: () => {
@@ -102,7 +103,7 @@ export class CustomObservableComponent implements OnInit {
     this.cusObsSubscription = cusObs.subscribe({
       next: (res) => {
         // console.log(res);
-        this.print(res, 'elContainer2');
+        this.service.print(res, 'elContainer2');
       },
       error: () => {
         this.custechStatus = 'error';
@@ -134,7 +135,7 @@ export class CustomObservableComponent implements OnInit {
       next: (res) => {
         console.log(res);
         this.names = res;
-        // this.print(res, 'elContainer2');
+        // this.service.print(res, 'elContainer2');
       },
       error: () => {
         console.log('error');
@@ -147,11 +148,6 @@ export class CustomObservableComponent implements OnInit {
     });
   }
 
-  print(val, containerId) {
-    let el = document.createElement('li');
-    el.innerText = val;
-    document.getElementById(containerId).appendChild(el);
-  }
   ///Teardown will return when subscription is unsubscribe, complete or error to clean up the memory  and space
   subscription() {
     console.log('Before subscribe');

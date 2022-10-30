@@ -1,1 +1,65 @@
-<p>filter works!</p>
+<section class="container">
+  <h1>Filter</h1>
+  <div class="flex">
+    <div class="box">
+      <h2>Example 1</h2>
+      <hr />
+      <p class="inner">
+        <strong>Filter :</strong>
+        By firstName Length
+      </p>
+
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+        </tr>
+        <tr *ngFor="let item of userLength">
+          <td>{{ item.id }}</td>
+          <td>{{ item.firstName }}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="box">
+      <h2>Example 2</h2>
+      <hr />
+      <p class="inner">
+        <strong>Filter By =></strong>
+        Gender
+      </p>
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Gender</th>
+        </tr>
+        <tr *ngFor="let item of filterGender">
+          <td>{{ item.id }}</td>
+          <td>{{ item.firstName }}</td>
+          <td>{{ item.gender }}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="box">
+      <h2>Example 3</h2>
+      <hr />
+      <p class="inner">
+        <strong>Filter By =></strong>
+        by nth Item
+      </p>
+
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Gender</th>
+        </tr>
+        <tr *ngFor="let item of filterId">
+          <td>{{ item.id }}</td>
+          <td>{{ item.firstName }}</td>
+          <td>{{ item.gender }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>

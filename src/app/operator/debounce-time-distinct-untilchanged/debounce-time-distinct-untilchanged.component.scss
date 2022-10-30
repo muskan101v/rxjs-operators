@@ -1,0 +1,18 @@
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container {
+  margin: 2rem;
+}
+hr {
+  background-color: gray;
+}
+.box {
+  flex-basis: 30%;
+}
+mat-form-field {
+  width: 100%;
+  margin-top: 32px;
+}

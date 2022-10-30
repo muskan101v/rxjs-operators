@@ -1,0 +1,62 @@
+<section class="container">
+  <h1>Retry RetryWhen Scan Delay</h1>
+  <hr style="margin-top: 32px" />
+  <p class="inner" style="margin: 32px 0">
+    <strong>Random Names</strong>
+    "Anup", 'Shekhar', 'Sharma', 'Hello', 'John', 'Alex','Robert'
+  </p>
+  <div class="flex">
+    <div class="box">
+      <h2>Ex - 1 | Retry</h2>
+      <hr />
+      <table class="table" *ngIf="personDetail">
+        <tr>
+          <td><strong>Id</strong></td>
+          <td>{{ personDetail.id }}</td>
+        </tr>
+        <tr>
+          <td><strong>Name</strong></td>
+          <td>{{ personDetail.firstName + personDetail.lastName }}</td>
+        </tr>
+        <tr>
+          <td><strong>Email</strong></td>
+          <td>{{ personDetail.email }}</td>
+        </tr>
+        <tr>
+          <td><strong>Phone</strong></td>
+          <td>{{ personDetail.phone }}</td>
+        </tr>
+        <tr>
+          <td><strong>Gender</strong></td>
+          <td>{{ personDetail.gender }}</td>
+        </tr>
+      </table>
+      <button
+        mat-raised-button
+        color="primary"
+        style="margin-top: 20px"
+        (click)="fetchDetail()"
+      >
+        <mat-icon *ngIf="fetching"
+          ><mat-spinner color="accent" diameter="20"> </mat-spinner
+        ></mat-icon>
+        {{ fetching ? "Fetching..." : "Fetch Details" }}
+      </button>
+
+      <h3 style="margin-top: 20px">
+        Status :<strong [ngStyle]="{ color: myColor }"> {{ status }}</strong>
+      </h3>
+    </div>
+
+    <!-- <div class="box">
+      <h2>Ex - 2 | TakeLast(5)</h2>
+      <hr />
+      <ul class="techlist" id="elContainer2" style="margin-top: 24px"></ul>
+    </div>
+    <div class="box">
+      <h2>Ex - 3 | TakeUntil(condition)</h2>
+      <hr />
+      <ul class="techlist" id="elContainer3" style="margin-top: 24px"></ul>
+    </div> -->
+  </div>
+</section>

@@ -1,0 +1,69 @@
+<section class="container">
+  <h2>Custom Observable</h2>
+  <div style="max-width: 70%; margin: auto">
+    <div class="flex">
+      <div class="inner-conatiner">
+        <h3><strong>Ex - 01 Mannual</strong></h3>
+        <hr />
+        <ul
+          class="techlist"
+          id="elContanier"
+          [ngClass]="
+            techStatus == 'complete'
+              ? 'completed'
+              : techStatus == 'error'
+              ? 'error'
+              : ''
+          "
+        ></ul>
+      </div>
+      <div class="inner-conatiner">
+        <h3><strong>Ex - 02 Custom Interval Observable</strong></h3>
+        <hr />
+        <ul
+          class="techlist"
+          id="elContainer2"
+          [ngClass]="
+            custechStatus == 'complete'
+              ? 'completed'
+              : custechStatus == 'error'
+              ? 'error'
+              : ''
+          "
+        ></ul>
+      </div>
+    </div>
+    <div style="margin-top: 32px">
+      <h3><strong>Ex - 03 Random Names</strong></h3>
+      <p class="box">
+        <strong>Random Names</strong>
+        "Anup", 'Shekhar', 'Sharma', 'Hello', 'John', Alex
+      </p>
+
+      <hr />
+      <p style="margin-top: 20px; font-size: 20px">
+        Current Name :
+        <strong>{{ names }}</strong>
+      </p>
+      <mat-chip-list aria-label="Fish selection" style="margin-top: 20px">
+        <mat-chip
+          selected
+          [ngClass]="
+            nameStatus == 'complete'
+              ? 'namecomplete'
+              : nameStatus == 'error'
+              ? 'nameError'
+              : ''
+          "
+          >{{
+            nameStatus == "complete"
+              ? "Success"
+              : nameStatus == "error"
+              ? "Error"
+              : "Pending"
+          }}
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
+</section>

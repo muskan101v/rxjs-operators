@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FromEventComponent } from './from-event/from-event.component';
+import { CustomObservableComponent } from './operator/custom-observable/custom-observable.component';
+import { FromEventComponent } from './operator/from-event/from-event.component';
 import { HomeComponent } from './home/home.component';
-import { IntervalComponent } from './interval/interval.component';
-import { OfFromComponent } from './of-from/of-from.component';
-import { ThrowErrorComponent } from './throw-error/throw-error.component';
-import { ToArrayComponent } from './to-array/to-array.component';
+import { IntervalComponent } from './operator/interval/interval.component';
+import { MapComponent } from './operator/map/map.component';
+import { OfFromComponent } from './operator/of-from/of-from.component';
+import { PluckComponent } from './operator/pluck/pluck.component';
+import { ThrowErrorComponent } from './operator/throw-error/throw-error.component';
+import { ToArrayComponent } from './operator/to-array/to-array.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -29,6 +32,18 @@ const routes: Routes = [
   {
     path: 'toArray',
     component: ToArrayComponent,
+  },
+  {
+    path: 'customObservable',
+    component: CustomObservableComponent,
+  },
+  {
+    path: 'map',
+    component: MapComponent,
+  },
+  {
+    path: 'pluck',
+    component: PluckComponent,
   },
 ];
 

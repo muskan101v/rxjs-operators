@@ -1,0 +1,47 @@
+h2 {
+  color: black;
+}
+.container {
+  margin: 40px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.inner-conatiner {
+  flex-basis: 500px;
+}
+hr {
+  background-color: gray;
+}
+ul.techlist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.error {
+  color: red;
+  background-color: rgb(255, 0, 0, 0.08) !important;
+  border-color: red !important;
+}
+.completed {
+  color: #3dd843;
+  background-color: rgb(61, 216, 67, 0.08) !important;
+  border-color: #3dd843 !important;
+}
+
+.namecomplete {
+  // color: #3dd843;
+  background-color: #3dd843 !important;
+}
+.nameError {
+  background-color: red !important;
+}
+.box {
+  background-color: #e7e7e7;
+  border: 1px solid gray;
+  padding: 8px;
+  border-radius: 4px;
+}

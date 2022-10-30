@@ -8,17 +8,38 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { FromEventComponent } from './from-event/from-event.component';
-import { HomeComponent } from './home/home.component';
+
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
-import { IntervalComponent } from './interval/interval.component';
-import { OfFromComponent } from './of-from/of-from.component';
-import { ThrowErrorComponent } from './throw-error/throw-error.component';
-import { ToArrayComponent } from './to-array/to-array.component';
+
+import { CustomObservableComponent } from './operator/custom-observable/custom-observable.component';
+import { MatChipsModule } from '@angular/material/chips';
+
+import { PluckComponent } from './operator/pluck/pluck.component';
+import { FilterComponent } from './operator/filter/filter.component';
+import { FromEventComponent } from './operator/from-event/from-event.component';
+import { HomeComponent } from './home/home.component';
+import { IntervalComponent } from './operator/interval/interval.component';
+import { MapComponent } from './operator/map/map.component';
+import { OfFromComponent } from './operator/of-from/of-from.component';
+import { ThrowErrorComponent } from './operator/throw-error/throw-error.component';
+import { ToArrayComponent } from './operator/to-array/to-array.component';
+
 @NgModule({
-  declarations: [AppComponent, FromEventComponent, HomeComponent, IntervalComponent, OfFromComponent, ThrowErrorComponent, ToArrayComponent],
+  declarations: [
+    AppComponent,
+    FromEventComponent,
+    HomeComponent,
+    IntervalComponent,
+    OfFromComponent,
+    ThrowErrorComponent,
+    ToArrayComponent,
+    CustomObservableComponent,
+    MapComponent,
+    PluckComponent,
+    FilterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,6 +51,7 @@ import { ToArrayComponent } from './to-array/to-array.component';
     MatCardModule,
     MatButtonModule,
     MatListModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

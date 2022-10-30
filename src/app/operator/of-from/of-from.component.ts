@@ -149,10 +149,7 @@ however, instead of filtering the items in an array, the 'filter' Pipeable Opera
 
 and passes them through or not.
 
-Map
-map  it's a stream world counterpart of the 'map' known from JavaScript arrays.
 
-This operator takes the emitted value and can transform it into some other value.
 
 Tap
  It allows us to cause side effects without changing the notifications.

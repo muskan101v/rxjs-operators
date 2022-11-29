@@ -1,0 +1,57 @@
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+/>
+<section class="container">
+  <h1>CombineLatest</h1>
+  <div>
+    <h2>Ex-1</h2>
+    <div class="card my-4">
+      <div class="card-body">
+        <input
+          id="temperature-input"
+          class="form-control"
+          placeholder="Temperature"
+        />
+        <br />
+        <select id="conversion-dropdown" class="form-control">
+          <option value="">Choose conversion</option>
+          <option value="f-to-c">°F -> °C</option>
+          <option value="c-to-f">°C -> °F</option>
+        </select>
+        <br />
+        <p class="card-text" id="result-text">Please fill the above form</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>Ex-2</h2>
+    <div class="row">
+      <div class="col-md-3pr-4">
+        <strong>Names</strong>
+        <hr />
+        <select class="form-control">
+          <option *ngFor="let item of nameSource" [value]="item">
+            {{ item }}
+          </option>
+        </select>
+        <br />
+        <br />
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>Ex-2</h2>
+    <div class="row">
+      <div class="col-md-3pr-4">
+        <strong>Color</strong>
+        <hr />
+        <select class="form-control">
+          <option *ngFor="let item of colorsource" [value]="item">
+            {{ item }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>

@@ -28,15 +28,15 @@ Emit provided number of values before completing.
   subscription: Subscription;
   ngOnInit(): void {
     this.take();
-    this.takeLast();
-    this.takeUntil();
+    // this.takeLast();
+    // this.takeUntil();
   }
   take() {
     from(this.array)
       .pipe(take(5))
       .subscribe({
         next: (res) => {
-          // console.log(res);
+          console.log(res);
           this.service.print(res, 'elContainer');
         },
       });

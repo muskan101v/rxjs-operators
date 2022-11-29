@@ -14,6 +14,9 @@ import { TapComponent } from './operator/tap/tap.component';
 import { TakeComponent } from './operator/take/take.component';
 import { RetryComponent } from './operator/retry/retry.component';
 import { DebounceTimeDistinctUntilchangedComponent } from './operator/debounce-time-distinct-untilchanged/debounce-time-distinct-untilchanged.component';
+import { CombineLatestComponent } from './operator/combine-latest/combine-latest.component';
+import { ForkjoinZipComponent } from './operator/forkjoin-zip/forkjoin-zip.component';
+import { ShareReplayComponent } from './operator/share-replay/share-replay.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -31,7 +34,7 @@ const routes: Routes = [
     component: OfFromComponent,
   },
   {
-    path: 'throwError',
+    path: 'throwError & catchError',
     component: ThrowErrorComponent,
   },
   {
@@ -69,6 +72,18 @@ const routes: Routes = [
   {
     path: 'debounceTime & DistinctUntilchanged',
     component: DebounceTimeDistinctUntilchangedComponent,
+  },
+  {
+    path: 'CombineLatest & withLatestFrom',
+    component: CombineLatestComponent,
+  },
+  {
+    path: 'forkJoin & Zip',
+    component: ForkjoinZipComponent,
+  },
+  {
+    path: 'shareReplay',
+    component: ShareReplayComponent,
   },
 ];
 

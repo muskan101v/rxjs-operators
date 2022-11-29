@@ -58,7 +58,7 @@ Animation. You want to shrink back an element after the user stopped hovering ov
       'keyup'
     ).pipe(
       map((data) => data.target.value),
-      // debounceTime(2000),
+      debounceTime(2000),
       // distinctUntilChanged(),
       switchMap((res) =>
         this.http.get(`https://dummyjson.com/products/search?q=${res}`)

@@ -133,4 +133,3 @@ In above example Subscription gets closed before the fourth next notification ge
 */
 
 // forkJoin - When all observables complete, emit the last emitted value from each.
-// combineLatest - When any observable emits a value, emit the latest value from each.

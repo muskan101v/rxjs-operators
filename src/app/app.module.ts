@@ -32,6 +32,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { DebounceTimeDistinctUntilchangedComponent } from './operator/debounce-time-distinct-untilchanged/debounce-time-distinct-untilchanged.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { CombineLatestComponent } from './operator/combine-latest/combine-latest.component';
+import { ForkjoinZipComponent } from './operator/forkjoin-zip/forkjoin-zip.component';
+import { ShareReplayComponent } from './operator/share-replay/share-replay.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,9 @@ import { MatInputModule } from '@angular/material/input';
     TakeComponent,
     RetryComponent,
     DebounceTimeDistinctUntilchangedComponent,
+    CombineLatestComponent,
+    ForkjoinZipComponent,
+    ShareReplayComponent,
   ],
   imports: [
     BrowserModule,

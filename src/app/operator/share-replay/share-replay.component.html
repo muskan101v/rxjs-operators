@@ -1,0 +1,51 @@
+<section class="container">
+  <h1>ShareReplay</h1>
+  <h2>SkinCare Product</h2>
+  <div class="flex">
+    <mat-card class="example-card" *ngFor="let product of skincare | async">
+      <mat-card-header>
+        <mat-card-title>{{ product.title }}</mat-card-title>
+        <mat-card-subtitle>{{ product.brand }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <img
+          mat-card-image
+          [src]="product.thumbnail"
+          alt="Photo of a Shiba Inu"
+        />
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <h2>SmartPhones</h2>
+  <div class="flex">
+    <mat-card class="example-card" *ngFor="let product of samtPhones | async">
+      <mat-card-header>
+        <mat-card-title>{{ product.title }}</mat-card-title>
+        <mat-card-subtitle>{{ product.brand }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <img
+          mat-card-image
+          [src]="product.thumbnail"
+          alt="Photo of a Shiba Inu"
+        />
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <h2>All Products</h2>
+  <div class="flex">
+    <mat-card class="example-card" *ngFor="let product of allProduct | async">
+      <mat-card-header>
+        <mat-card-title>{{ product.title }}</mat-card-title>
+        <mat-card-subtitle>{{ product.brand }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <img
+          mat-card-image
+          [src]="product.thumbnail"
+          alt="Photo of a Shiba Inu"
+        />
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
